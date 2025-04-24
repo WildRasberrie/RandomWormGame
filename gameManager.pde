@@ -53,7 +53,6 @@ class GameManager {
   void endScreen (){
     background (0);
     textSize (120);
-    textMode(CENTER);
     textFont (ui.redAlert);
     fill (255);
     text ("Thanks for playing! :) \n\n\n SCORE: \t" + ui.score, 150,height/2);
