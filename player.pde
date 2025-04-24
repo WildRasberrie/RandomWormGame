@@ -46,4 +46,4 @@ class Player {
       vel = new PVector(2,0);
     }
   }
-}
+} 

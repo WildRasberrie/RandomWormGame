@@ -15,7 +15,7 @@ class Collectibles {
     for (int i = 0; i<1; i ++) {
       fill (player[i].random[2]);
     }
-    circle (pos.x, pos.y, size);
+    circle (pos.x, pos.y, size); 
   }
   void update() {
     for (int i=0; i<player.length; i++) {

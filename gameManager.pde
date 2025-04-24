@@ -58,5 +58,5 @@ class GameManager {
     fill (255);
     text ("Thanks for playing! :) \n\n\n SCORE: \t" + ui.score, 150,height/2);
  
-    }
+    } 
 }

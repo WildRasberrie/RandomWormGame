@@ -15,6 +15,6 @@ class UI {
     rect (pos.x+95, pos.y-25, 20, 25);
     fill (#53C1DE);
     text ("SCORE:\t"+score,pos.x,pos.y);
-  }  
+  } 
   
 }
