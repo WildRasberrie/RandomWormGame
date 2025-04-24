@@ -1,4 +1,3 @@
-
 Player[] player;
 Collectibles[] collectibles;
 UI ui;

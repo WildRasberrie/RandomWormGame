@@ -19,11 +19,17 @@ class Collectibles {
   }
   void update() {
     for (int i=0; i<player.length; i++) {
-      if (keyPressed && dist (player[i].pos.x+size+player[i].expansion, player[i].pos.y, pos.x-5, pos.y+10) < 20 ) {
+      if (keyPressed && dist (player[i].pos.x, player[i].pos.y, pos.x, pos.y) < 20 ) {
         colliding = true;
       } else colliding = false;
       if (colliding) {
-        player[i].expansion+= 50;
+        
+        player[i].lastPOS = player[i].x;
+        
+        Player p = new Player(player[i].lastPOS-50,player[i].pos.y,size);
+        player[i].x = player[i].x +20;
+        player = (Player[]) append (player, p);
+        
         ui.score++;
         pos=new PVector (-5000, 5000); 
       }

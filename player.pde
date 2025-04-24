@@ -1,6 +1,6 @@
 class Player {
   PVector pos, vel;
-  float x, y, size, speed,expansion;
+  float x, y, size, speed,expansion,lastPOS;
   boolean left, right, up, down;
   color[] random = {#FC0303, #5903FC, #03FC5C, #E7FC03};
 
@@ -19,7 +19,7 @@ class Player {
 
   void display() {
     fill (random[1]);
-    rect (pos.x, pos.y,size + expansion, size);
+    circle (pos.x, pos.y,size);
   }
 
   void update () {
@@ -44,6 +44,14 @@ class Player {
     if (right == true) {
 
       vel = new PVector(2,0);
+    }
+  }
+  void borderCollisions(){
+    if (pos.x-25<0 || pos.x+25> width){
+      pos.x *=-2;
+    }
+    if (pos.y-25<0 || pos.y+25>height){
+      pos.y *=-2;
     }
   }
 } 
